@@ -1,0 +1,305 @@
+html {
+	min-height:100%;
+}
+
+body {
+	/*background:none;*/
+	background-size: 100% auto;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body.admin {
+	background: url("../../img/background_admin.jpg") no-repeat fixed 0 0 rgba(0, 0, 0, 0);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	z-index:1;
+	/*background-image: linear-gradient(to right, #fff 0px, #cf0b0f 100%);*/
+}
+
+
+.jumbotron p {
+	color: #000000;
+}
+
+.form-login {
+    margin: 0 auto;
+    max-width: 330px;
+    padding: 15px;
+}
+
+/*
+.admin #main > #sidebar {
+	padding: 5px;
+	position : relative;
+	left: 0px;
+	top : 0px;
+	width:20%;
+	display:inline-block;
+	background-color: rgba(200,200,200,0.5);
+	border-radius : 0px 10px 10px 0px;
+	text-align: left;
+}
+
+.admin #main > #content {
+	position : relative;
+	right:0px;
+	top : 0px;
+	width:79%;
+	display:inline-block;
+}
+*/
+
+form , input, button {
+	color: #000000;
+}
+
+.navbar-default {
+	background-color: #cf0b0f;
+	background-image:none;
+	/*background-image: linear-gradient(to left, #fff 0px, #cf0b0f 100%);*/
+	color: #000;
+	box-shadow: 0px 5px 5px black;
+}
+
+.dropdown-menu {
+	box-shadow: 0px 0px 10px black;
+}
+
+.navbar-default .navbar-nav > li > a , 
+.navbar-default .navbar-brand { 
+	color: #eee;
+}
+
+nav a {
+	text-align: left;
+}
+
+section , .section {
+	padding-top: 50px;
+}
+
+
+.input-group[class*="col-"] {
+    float: left;
+}
+
+.controls .help-block {
+	display: none;
+}
+
+.input-group-addon {
+	cursor: pointer;
+}
+
+.hoverable-bold {
+	padding: 0 auto;
+	margin: 0 auto;
+}
+
+.hoverable-bold:hover {
+	font-weight : bold;
+}
+
+.redondeado-chico {
+	border-radius: 5px;
+}
+
+.table thead {
+	background-color:#c12e2a;
+	/*background-color: #cf0b0f;*/
+	/*background-image: linear-gradient(to left, #fff 0px, #cf0b0f 100%);*/
+	background-repeat: no-repeat;
+	color: white;
+}
+
+.table-container {
+	box-shadow: 0px 2px 5px black;
+	border-radius: 5px;
+	overflow: auto;
+}
+
+.admin-tools {
+	position:relative; 
+	float:right;
+	padding-bottom: 10px;
+	min-height:50px;
+	display : none;
+}
+
+.admin-tools > div {
+	cursor: pointer;
+	border-radius: 5px;
+	min-width:50px;
+	display: inline-block;
+	text-align:center;
+	position:relative;
+	float:left;
+}
+
+.admin-tools > div.espaciador {
+	cursor:default;
+}
+
+.form-horizontal .control-label {
+	text-transform : capitalize;
+}
+
+.admin-tools > div:hover {
+	color: white;
+	background-color: firebrick;
+	box-shadow: -3px 3px 3px black;
+}
+
+.admin-tools > div.espaciador:hover {
+	background-color: rgba(255, 255, 255, 0);
+	box-shadow: none;
+}
+
+.admin-tools > div:active {
+	color: white;
+	background-color: firebrick;
+	top: 3px;
+	box-shadow:none;
+}
+
+.admin-tools > div.espaciador:active {
+	background-color: rgba(255, 255, 255, 0);
+	box-shadow: none;
+}
+
+table[data-table-type=HTMLTableBuilder] tbody > tr {
+	cursor:pointer;
+}
+
+tr[selected] , 
+tr[selected]:hover{
+	background-color : #cccccc;
+	border : 2px red solid;
+}
+
+
+
+/* plugin de tree colapsable con checkboxes 
+ * http://www.redcarrot.co.uk/blog/entry/collapsible-checkbox-tree-jquery-plugin/
+ * */
+
+#buttons {
+	margin-bottom:20px;
+	display:none;
+}
+
+.tree{
+	/*
+	width:350px;
+	background-color:#D3D3D3;
+	*/
+	height:200px;
+	overflow:auto;
+	
+	/*
+	border-left: #cccccc 1px inset;
+	*/
+	font-size:100%;
+}
+
+.tree ul {
+	margin:0!important;
+	padding:0 0 0 20px!important;
+}
+ul.tree li {
+	list-style:none;
+}
+
+ul.tree li > label{
+	display:inline;
+	font-weight:normal;
+	text-align:left;
+	cursor:pointer;
+}
+
+ul.tree li > label:hover{
+	color:#ff2222;
+	/*text-decoration: underline;*/
+}
+
+.tree ul.hide {
+	display:none;
+}
+.tree span {
+	color:#000000;
+	font-family:"Courier New", Courier, monospace, mono;
+	cursor:default;
+	font-weight:bold;
+}
+.tree span.expanded, .tree span.collapsed {
+	cursor:pointer;
+	font-size: 120%;
+	background-color:#ff0000;
+	border:1px solid #000;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	padding:0 5px;
+	border:none;
+}
+
+.tree span.collapsed {
+	background-color:#00ac14;
+}
+
+.tree span.expanded:hover, .tree span.collapsed:hover {
+	background-color:#4b4b4b;
+	color:#fff;
+}
+
+
+.builder-message {
+    font-size: 150%;
+    font-weight: bolder;
+    text-align: left;
+    box-shadow: -2px 2px 5px #000;
+    padding: 10px 20px;
+    margin: 10px 10px 0 10px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px #000000;
+    border-radius: 10px;
+}
+
+.ok {
+	background-color: yellowgreen;
+}
+
+.error {
+	background-color: firebrick;
+}
+
+.fecha-persona{
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	background-color: white;
+	border: rgba(0,0,0,0.5) 2px solid;
+	display:inline-block;
+	position:relative;
+	cursor:pointer;
+}
+
+.fecha-persona:hover{
+	border: rgba(255,0,0,0.5) 2px solid;
+}
+
+.fecha-persona > span{
+	width:50%;
+	height:50%;
+	border-radius:50%;
+	background-color: rgba(0,0,0,0.8);
+	position:absolute;
+	top:25%;
+	left:25%;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>PONG - 3D</title>
+        <meta charset="utf-8">
+
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <link rel="stylesheet" href="css/00-bootstrap.min.css" />
+        <link rel="stylesheet" href="css/01-bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="css/01-font-awesome.css" />
+        <link rel="stylesheet" href="css/01-font-silkscreen.css" />
+        <link rel="stylesheet" href="css/02-app.lib.css" />
+        <link rel="stylesheet" href="css/03-animaciones.css" />
+        <link rel="stylesheet" href="css/3d.css" />
+        
+        <script src="js/00-jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/00-q.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/02-app.lib.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/02-app.ui.lib.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/03-app.ui-fields.lib.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/03-bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/04-app.ui-bootstrap.lib.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/04-jquery.address.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/04-tween.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/pong.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="js/three/build/three.min.js"></script>
+
+        <script src="js/three/examples/js/loaders/MTLLoader.js"></script>
+        <script src="js/three/examples/js/loaders/OBJMTLLoader.js"></script>
+        <script src="js/three/examples/js/controls/OrbitControls.js"></script>
+        <script src="js/three/examples/js/libs/tween.min.js"></script>
+        <script src="js/three/examples/js/renderers/CSS3DRenderer.js"></script>
+        
+        <script src="js/three/examples/js/shaders/CopyShader.js"></script>
+        <script src="js/three/examples/js/shaders/DotScreenShader.js"></script>
+        <script src="js/three/examples/js/shaders/RGBShiftShader.js"></script>
+
+        <script src="js/three/examples/js/shaders/BleachBypassShader.js"></script>
+        <script src="js/three/examples/js/shaders/ColorifyShader.js"></script>
+        <script src="js/three/examples/js/shaders/ConvolutionShader.js"></script>
+        <script src="js/three/examples/js/shaders/CopyShader.js"></script>
+        <script src="js/three/examples/js/shaders/DotScreenShader.js"></script>
+        <script src="js/three/examples/js/shaders/FilmShader.js"></script>
+        <script src="js/three/examples/js/shaders/HorizontalBlurShader.js"></script>
+        <script src="js/three/examples/js/shaders/SepiaShader.js"></script>
+        <script src="js/three/examples/js/shaders/VerticalBlurShader.js"></script>
+        <script src="js/three/examples/js/shaders/VignetteShader.js"></script>
+
+        <script src="js/three/examples/js/postprocessing/EffectComposer.js"></script>
+        <script src="js/three/examples/js/postprocessing/RenderPass.js"></script>
+        <script src="js/three/examples/js/postprocessing/BloomPass.js"></script>
+        <script src="js/three/examples/js/postprocessing/FilmPass.js"></script>
+        <script src="js/three/examples/js/postprocessing/DotScreenPass.js"></script>
+        <script src="js/three/examples/js/postprocessing/TexturePass.js"></script>
+        <script src="js/three/examples/js/postprocessing/ShaderPass.js"></script>
+        <script src="js/three/examples/js/postprocessing/MaskPass.js"></script>
+        
+        <script src="js/pong3d.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+
+    <body>
+        
+        <div class="seccion" id="main">
+            <div class="titulo"><p>PONG</p></div>
+            <div class="menu redondeado">
+               <div class="opcion" onclick="app.ui.change_section('juego');" > jugar </div>
+               <div class="opcion" onclick="app.ui.change_section('opciones');"> opciones </div>
+               <div class="opcion" onclick="app.ui.change_section('stats');"> stats</div>
+            </div>
+        </div>
+        <div class="seccion" id="juego" onshow="pong.start();" >
+            <div id="puntaje1" class="puntaje" >0</div>
+            <div id="puntaje2" class="puntaje" >0</div>
+            <audio id="audio-colision" src="audio/colision.ogg" ></audio>
+            <audio id="audio-gol" src="audio/gol.ogg" ></audio>
+            <audio id="audio-game-over" src="audio/game_over.ogg" ></audio>
+        </div>
+        <div class="seccion" id="opciones" onshow="app.ui.change_section('main').then(function(){alert('no hay opciones');});" >
+            <input type="hidden" value="2" id="cantidad-players" />
+        </div>
+        <div class="seccion" id="stats" onshow="alert('No hay stats'); app.ui.change_section('main');"></div>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+LOG=$1
+
+if [ -z "$1" ]
+  then
+    LOG="$HOME/.virtual_serial_port.log"
+fi
+
+touch $LOG
+echo "Enviando log de datos a $LOG"
+
+COMANDO="socat -v -d -d pty,raw,echo=0 pty,raw,echo=0"
+$COMANDO &>$LOG &disown
+
+sleep 1 && tail -n3 $LOG 

@@ -1,0 +1,16 @@
+/* 
+	https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries
+	http://stackoverflow.com/questions/3893342/do-iphone-android-browsers-support-css-media-handheld
+*/
+
+
+@media only screen and (orientation: portrait) {
+	.admin #main > #sidebar {
+		display: none;
+	}
+	
+	.admin #main > #content {
+		width: 100%;
+	}
+}
+
