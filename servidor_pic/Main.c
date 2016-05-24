@@ -21,7 +21,7 @@
 void reset_input_buffer();
 
 
-struct    pong_servidor    server;                //Server global.
+struct    pong_servidor   server;                //Server global.
 struct    pong_cliente    *cliente_serial;    //Sólo puede haber uno de estos.
 
 // Variables para la gestión del input desde RS232
@@ -30,8 +30,8 @@ unsigned char    input_buffer_index    = 0;
 char             buffering             = 0;
 
 // Variables y constantes para timers y estados.
-#define            TIEMPO_STATS      100
-unsigned int    timer_stats        = 0; 
+#define         TIEMPO_STATS    100
+unsigned int    timer_stats     = 0; 
 unsigned int    timer_pelota    = 0; 
 
 
