@@ -36,10 +36,10 @@ void InitPorts(void)
     TRISAbits.RA1=1; //entrada analógica 01
     
     //AN0-AN1 Analogica. el resto digital
-	ADCON1bits.PCFG0=1;
-	ADCON1bits.PCFG1=0;
-	ADCON1bits.PCFG2=1;
-	ADCON1bits.PCFG3=1;
+    ADCON1bits.PCFG0=1;
+    ADCON1bits.PCFG1=0;
+    ADCON1bits.PCFG2=1;
+    ADCON1bits.PCFG3=1;
     
     BZZ=0;
     LED_P=0;
@@ -51,23 +51,23 @@ void InitPorts(void)
 //TIMER2
 void InitTimer2(void)
 {
-	// El timer2 provoca una interrupción cada 1 ms
-	OpenTimer2( TIMER_INT_ON &
-				T2_PS_1_4 &  
-				T2_POST_1_5 );
-	PR2 = 250;
-		
-	IPR1bits.TMR2IP = 1;	//Interrup de Timer2 en el vector alto
+    // El timer2 provoca una interrupción cada 1 ms
+    OpenTimer2( TIMER_INT_ON &
+                T2_PS_1_4 &  
+                T2_POST_1_5 );
+    PR2 = 250;
+        
+    IPR1bits.TMR2IP = 1;    //Interrup de Timer2 en el vector alto
 }
 
 /*************************************************************************************************
-*     Function Name:    initinterrupt		        		                  			 		 *
-*     Return Value:     none				                        			 				 *
-*     Parameters:       none									                 				 *
-*     Description:      Configura las interrupciones 											 *												 *
+*     Function Name:    initinterrupt                                                                *
+*     Return Value:     none                                                                      *
+*     Parameters:       none                                                                      *
+*     Description:      Configura las interrupciones                                              *                                                 *
 *************************************************************************************************/
 void InitInterrupt(void)
-{	
+{    
   RCONbits.IPEN = 1;    // Habilita proridad de interrupciones
   INTCONbits.GIEH = 1;  // vector alto
   INTCONbits.GIEL = 1;  // vector bajo
@@ -87,10 +87,10 @@ void initUSART(void) {
 
 void putch (char caracter) {
     
-	while (!PIR1bits.TXIF) {
+    while (!PIR1bits.TXIF) {
         continue;
-	}
-	
+    }
+    
     TXREG = caracter;
 }
 
